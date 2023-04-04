@@ -18,6 +18,12 @@ const App = () => {
       <Button size="xl" color="red" onClick={handleClick}>
         Extra Large Button
       </Button>
+      <Button type="secondary" size="xl" color="gray" onClick={handleClick}>
+        Secondary Extra Large Button
+      </Button>
+      <Button type="soft" size="xl" color="emerald" onClick={handleClick}>
+        Soft Extra Large Button
+      </Button>
     </div>
   );
 };
