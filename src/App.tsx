@@ -21,8 +21,14 @@ const App = () => {
       <Button type="secondary" size="xl" color="gray" onClick={handleClick}>
         Secondary Extra Large Button
       </Button>
+      <Button type="secondary" size="l" color="red" onClick={handleClick}>
+        Secondary Large Button
+      </Button>
       <Button type="soft" size="xl" color="emerald" onClick={handleClick}>
         Soft Extra Large Button
+      </Button>
+      <Button type="soft" size="l" color="blue" onClick={handleClick}>
+        Soft Large Button
       </Button>
     </div>
   );
