@@ -1,1 +1,1 @@
-# vite-react-typescript-tailiwind
+# vite-react-typescript-chakraui-demo-app
