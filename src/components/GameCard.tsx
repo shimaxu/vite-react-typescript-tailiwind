@@ -1,5 +1,6 @@
-import { Card, Heading, CardBody, Text, Image } from "@chakra-ui/react";
+import { Card, Heading, CardBody, Text, Image, HStack } from "@chakra-ui/react";
 import { Game } from "../hooks/useGames";
+import CriticScore from "./CriticScore";
 import GameIconList from "./GameIconList";
 
 interface Props {
@@ -12,9 +13,12 @@ const GameCard = ({ game }: Props) => {
       <CardBody>
         <Heading size="md"> {game.name}</Heading>
         <Text>{game.description}</Text>
-        <GameIconList
-          platforms={game.parent_platforms.map((p) => p.platform)}
-        />
+        <HStack justify="space-between">
+          <GameIconList
+            platforms={game.parent_platforms.map((p) => p.platform)}
+          />
+          <CriticScore score={game.metacritic}/>
+        </HStack>
       </CardBody>
     </Card>
   );
