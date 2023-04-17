@@ -7,7 +7,7 @@ interface ModelResponse<T> {
   results: T[];
 }
 
-function useModel<T>(endpoint: string) {
+const useModel = <T>(endpoint: string) => {
   const [model, setModel] = useState<T[]>([]);
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -32,6 +32,6 @@ function useModel<T>(endpoint: string) {
   }, []);
 
   return { model, error, isLoading };
-}
+};
 
 export default useModel;
