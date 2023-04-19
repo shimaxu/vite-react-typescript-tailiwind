@@ -1,5 +1,5 @@
-import { Genre } from "./useGenres";
 import useModel from "./useModel";
+import { Genre } from "./useGenres";
 
 export interface Platforms {
   id: number;

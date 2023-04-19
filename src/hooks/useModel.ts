@@ -36,7 +36,7 @@ const useModel = <T>(
           setIsLoading(false);
         });
 
-      return () => controller.abort();
+      // return () => controller.abort();
     },
     deps ? [...deps] : []
   );
