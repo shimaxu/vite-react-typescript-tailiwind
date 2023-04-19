@@ -1,12 +1,12 @@
 import useModel from "./useModel";
 
-export interface Genres {
+export interface Genre {
   id: number;
   name: string;
   slug: string;
   image_background: string;
 }
 
-const useGames = () => useModel<Genres>("/genres");
+const useGenres = () => useModel<Genre>("/genres");
 
-export default useGames;
+export default useGenres;
