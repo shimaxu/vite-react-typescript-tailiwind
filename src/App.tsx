@@ -6,6 +6,7 @@ import { Genre } from "./hooks/useGenres";
 import GameList from "./components/GameList";
 import NavBar from "./components/NavBar";
 import GenrerList from "./components/GenrerList";
+import PlatformFilter from "./components/PlatformFilter";
 
 const App = () => {
   const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null);
@@ -25,10 +26,14 @@ const App = () => {
       </GridItem>
       <Show above="lg">
         <GridItem area="aside" paddingX={5}>
-          <GenrerList selectedGenre={selectedGenre} onSelectGenre={(genre) => setSelectedGenre(genre)} />
+          <GenrerList
+            selectedGenre={selectedGenre}
+            onSelectGenre={(genre) => setSelectedGenre(genre)}
+          />
         </GridItem>
       </Show>
       <GridItem area="main">
+        <PlatformFilter />
         <GameList selectedGenre={selectedGenre} />
       </GridItem>
     </Grid>
