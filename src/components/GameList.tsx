@@ -4,13 +4,15 @@ import { Genre } from "../hooks/useGenres";
 import GameCard from "./GameCard";
 import GameListContainer from "./GameListContainer";
 import GameListSkeleton from "./GameListSkeleton";
+import { Platform } from "../hooks/usePlatforms";
 
 interface Props {
   selectedGenre: Genre | null;
+  selectedPlatform: Platform | null;
 }
 
-const GameList = ({ selectedGenre }: Props) => {
-  const { model, error, isLoading } = useGames(selectedGenre);
+const GameList = ({ selectedGenre, selectedPlatform }: Props) => {
+  const { model, error, isLoading } = useGames(selectedGenre, selectedPlatform);
   const skeletons = [1, 2, 3, 4, 5, 6];
 
   return (
